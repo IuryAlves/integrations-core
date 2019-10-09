@@ -191,13 +191,6 @@ class TestAuth:
 
         assert isinstance(http.options['auth'], requests.auth.HTTPDigestAuth)
 
-    def test_config_unsupported_authtype(self):
-        instance = {'username': 'user', 'password': 'pass', 'auth_type': 'other'}
-        init_config = {}
-
-        with pytest.raises(ConfigurationError):
-            RequestsWrapper(instance, init_config)
-
     def test_config_basic_only_username(self):
         instance = {'username': 'user'}
         init_config = {}

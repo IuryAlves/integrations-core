@@ -15,6 +15,12 @@ instances:
     #
     port: 1099
 
+    ## @param auth - string - optional
+    ## Type of authentication to use
+    ## Available value are "basic", "digest".
+    #
+    # auth_type: <AUTH_TYPE>
+
     ## @param user - string - optional
     ## Username from the credentials needed to connect to the host.
     #

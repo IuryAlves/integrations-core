@@ -58,6 +58,12 @@ instances:
     # label_tags:
     #   - <MARATHON_LABEL_NAME>
 
+    ## @param auth - string - optional
+    ## Type of authentication to use
+    ## Use "basic" or "digest".
+    #
+    # auth_type: <AUTH_TYPE>
+
     ## @param username - string - optional
     ## The username to use if services are behind basic auth.
     #

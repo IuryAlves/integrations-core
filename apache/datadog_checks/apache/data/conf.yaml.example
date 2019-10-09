@@ -33,6 +33,12 @@ instances:
     #
   - apache_status_url: http://localhost/server-status?auto
 
+    ## @param auth - string - optional
+    ## Type of authentication to use
+    ## Available value are "basic", "digest".
+    #
+    # auth_type: <AUTH_TYPE>
+
     ## @param username - string - optional
     ## Username for the Apache status endpoint authentication.
     ##

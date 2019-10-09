@@ -178,10 +178,6 @@ class RequestsWrapper(object):
                     elif config['auth_type'] == 'digest':
                         auth = requests.auth.HTTPDigestAuth(config['username'], config['password'])
 
-                    else:
-                        raise ConfigurationError(
-                            '{} is an unsupported value for auth_type, use basic or digest'.format(config['auth_type'])
-                        )
                 else:
                     auth = (config['username'], config['password'])
 

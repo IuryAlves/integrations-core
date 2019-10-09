@@ -7,6 +7,12 @@ instances:
     #
   - url: http://<HARBOR_URL>
 
+    ## @param auth - string - optional
+    ## Type of authentication to use
+    ## Use "basic" or "digest".
+    #
+    # auth_type: <AUTH_TYPE>
+
     ## @param username - string - required
     ## The username to use for authentication against the Harbor API.
     ## Note: Some metrics and service checks requires an admin account to be collected.
