@@ -4,7 +4,6 @@
 
 import re
 
-import requests
 from six.moves.urllib.parse import urlparse
 
 from datadog_checks.checks import AgentCheck
@@ -72,7 +71,7 @@ class Lighttpd(AgentCheck):
         url = self.assumed_url.get(instance['lighttpd_status_url'], instance['lighttpd_status_url'])
 
         tags = instance.get('tags', [])
-        
+
         self.log.debug("Connecting to %s" % url)
 
         # Submit a service check for status page availability.
