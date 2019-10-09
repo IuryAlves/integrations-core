@@ -62,7 +62,7 @@ STANDARD_FIELDS = {
     'tls_verify': True,
     'timeout': DEFAULT_TIMEOUT,
     'username': None,
-    'auth_type': None
+    'auth_type': None,
 }
 # For any known legacy fields that may be widespread
 DEFAULT_REMAPPED_FIELDS = {
@@ -174,9 +174,9 @@ class RequestsWrapper(object):
                 if config['auth_type']:
                     if config['auth_type'] == 'basic':
                         auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
-                    
+
                     elif config['auth_type'] == 'digest':
-                        auth = requests.auth.HTTPDigestAuth(config['username'], config['password']) 
+                        auth = requests.auth.HTTPDigestAuth(config['username'], config['password'])
 
                     else:
                         raise ConfigurationError(
