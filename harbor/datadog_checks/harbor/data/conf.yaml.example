@@ -7,7 +7,7 @@ instances:
     #
   - url: http://<HARBOR_URL>
 
-    ## @param auth - string - optional
+    ## @param auth_type - string - optional
     ## Type of authentication to use
     ## Use "basic" or "digest".
     #

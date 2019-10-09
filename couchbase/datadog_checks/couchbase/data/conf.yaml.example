@@ -40,7 +40,7 @@ instances:
     #
     # query_monitoring_url: http://localhost:8093
 
-    ## @param auth - string - optional
+    ## @param auth_type - string - optional
     ## Type of authentication to use
     ## Use "basic" or "digest".
     #

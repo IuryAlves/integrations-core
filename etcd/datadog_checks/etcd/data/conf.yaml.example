@@ -59,7 +59,7 @@ instances:
     #
     # url: "https://server:port"
 
-    ## @param auth - string - optional
+    ## @param auth_type - string - optional
     ## Type of authentication to use
     ## Use "basic" or "digest".
     #

@@ -58,7 +58,7 @@ instances:
     # label_tags:
     #   - <MARATHON_LABEL_NAME>
 
-    ## @param auth - string - optional
+    ## @param auth_type - string - optional
     ## Type of authentication to use
     ## Use "basic" or "digest".
     #

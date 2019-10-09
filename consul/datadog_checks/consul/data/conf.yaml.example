@@ -93,7 +93,7 @@ instances:
     #   - <KEY_1>:<VALUE_1>
     #   - <KEY_2>:<VALUE_2>
 
-    ## @param auth - string - optional
+    ## @param auth_type - string - optional
     ## Type of authentication to use
     ## Use "basic" or "digest".
     #

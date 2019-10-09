@@ -33,7 +33,7 @@ instances:
     #
   - apache_status_url: http://localhost/server-status?auto
 
-    ## @param auth - string - optional
+    ## @param auth_type - string - optional
     ## Type of authentication to use
     ## Available value are "basic", "digest".
     #
