@@ -171,7 +171,11 @@ class RequestsWrapper(object):
         auth = None
         if config['password']:
             if config['username']:
-                if config['auth_type']:
+                auth_type = config.get('auth_type', 'basic').lowercase():
+                if auth_type == 'digest':
+                    auth = requests.auth.HTTPDigestAuth(config['username'], config['password'])
+                else:
+                    auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
                     if config['auth_type'] == 'basic':
                         auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
 
