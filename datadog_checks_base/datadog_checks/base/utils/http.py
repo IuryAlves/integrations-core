@@ -172,14 +172,15 @@ class RequestsWrapper(object):
         if config['password']:
             if config['username']:
                 if config['auth_type']:
-                    if config['auth_type'] == 'basic':
-                        auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
-
-                    elif config['auth_type'] == 'digest':
+                    auth_type = config.get('auth_type', 'basic').lower()
+                    if auth_type not in ('basic', 'digest'):
+                        self.logger.debug('auth_type {} is not supported, defaulting to basic'.format(auth_type))
+                    if auth_type == 'digest':
                         auth = requests.auth.HTTPDigestAuth(config['username'], config['password'])
-
+                    else:
+                        auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
                 else:
-                    auth = (config['username'], config['password'])
+                    auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
 
             elif config['ntlm_domain']:
                 ensure_ntlm()
