@@ -41,8 +41,8 @@ instances:
     # query_monitoring_url: http://localhost:8093
 
     ## @param auth_type - string - optional
-    ## Type of authentication to use
-    ## Use "basic" or "digest".
+    ## The type of authentication to use.
+    ## The available values are "basic" and "digest".
     #
     # auth_type: <AUTH_TYPE>
 
