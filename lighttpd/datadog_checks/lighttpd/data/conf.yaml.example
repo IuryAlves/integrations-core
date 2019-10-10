@@ -34,7 +34,7 @@ instances:
   - lighttpd_status_url: http://localhost/server-status?auto
 
     ## @param auth_type - string - optional
-    ## The type of authentication to use. to collect data from the Lighttpd server url.
+    ## The type of authentication to use to collect data from the Lighttpd server url.
     ## The available values are "basic" and "digest".
     #
     # auth_type: <AUTH_TYPE>
