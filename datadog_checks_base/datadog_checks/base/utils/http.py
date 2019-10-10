@@ -180,7 +180,7 @@ class RequestsWrapper(object):
                     else:
                         auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
                 else:
-                    auth = requests.auth.HTTPBasicAuth(config['username'], config['password'])
+                    auth = (config['username'], config['password'])
 
             elif config['ntlm_domain']:
                 ensure_ntlm()
